@@ -1,0 +1,60 @@
+<div *ngIf="polo" class="container">
+  <h1>Polo {{polo.name}}</h1>
+  <p>exibindo detalhes do polo {{polo.name}}#{{polo.id}}</p>
+
+  <form [formGroup]="sedeItemForm">
+    <div class="row">
+
+      <app-cep [control]="cep" (cepData)="onCepDataReceived($event)"></app-cep>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Nome da Rua</mat-label>
+        <input matInput placeholder="Nome da Rua" formControlName="rua">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Bairro</mat-label>
+        <input matInput placeholder="Bairro" formControlName="bairro">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Estado</mat-label>
+        <input matInput placeholder="Estado" formControlName="estado">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Cidade</mat-label>
+        <input matInput placeholder="Cidade" formControlName="cidade">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="Digite o Nome" formControlName="name">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Business</mat-label>
+        <input matInput placeholder="Digite o Business" formControlName="business">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Valuation</mat-label>
+        <input matInput placeholder="Digite o valor" formControlName="valuation">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>CNPJ</mat-label>
+        <input matInput placeholder="Digite o CNPJ" formControlName="cnpj" mask="00.000.000/0000-00">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Ativo?</mat-label>
+        <select matNativeControl formControlName="active">
+          <option value="true" selected>Sim</option>
+          <option value="false">Não</option>
+        </select>
+      </mat-form-field>
+    </div>
+
+    <button mat-flat-button color="primary">Voltar</button>
+    <button mat-flat-button color="warn">Salvar</button>
+
+  </form>
+</div>

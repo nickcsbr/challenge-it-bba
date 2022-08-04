@@ -1,0 +1,21 @@
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: .25fr 1.5fr .1fr;
+}
+
+nav {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+footer {
+    background-color: green;
+}
