@@ -1,2 +1,47 @@
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@use '@angular/material' as mat;
+
+$padding-right: 19px;
+$col-size-1: 14.91%;
+$col-size-2: 40.32%;
+
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+select {
+  height: 39.13px;
+}
+
+input {
+  height: 26px;
+}
+
+.container {
+  padding: 0px 150px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-size-"] {
+  padding-right: $padding-right;
+}
+
+.col-size-1 {
+  width: $col-size-1;
+}
+
+.col-size-2 {
+  width: $col-size-2;
+}

@@ -7,11 +7,6 @@ table {
   width: 100%;
 }
 
-td,
-th {
-  width: 25%;
-}
-
 mat-icon {
   vertical-align: middle;
 }
@@ -22,7 +17,20 @@ a {
 }
 
 .status {
-
   font-size: 15px;
   opacity: 0.5;
+}
+
+input {
+  padding: 0 !important;
+  height: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 0.3fr;
+}
+
+.w-75{
+  width: 100px !important;
 }

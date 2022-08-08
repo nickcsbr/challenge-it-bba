@@ -4,12 +4,6 @@
   "newProjectRoot": "projects",
   "projects": {
     "challenge-it-bba": {
-      "i18n": {
-        "sourceLocale": "en-US",
-        "locales": {
-          "pt-BR": "src/locale/messages.pt.xlf"
-        }
-      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -26,7 +20,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "localize": ["pt-BR"],
             "outputPath": "dist/challenge-it-bba",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -87,12 +80,6 @@
             }
           },
           "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "challenge-it-bba:build"
-          }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",

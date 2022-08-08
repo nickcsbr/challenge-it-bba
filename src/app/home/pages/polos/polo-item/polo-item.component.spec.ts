@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SedeItemComponent } from './sede-item.component';
+import { PoloItemComponent } from './polo-item.component';
 
-describe('SedeItemComponent', () => {
-  let component: SedeItemComponent;
-  let fixture: ComponentFixture<SedeItemComponent>;
+describe('PoloItemComponent', () => {
+  let component: PoloItemComponent;
+  let fixture: ComponentFixture<PoloItemComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SedeItemComponent ]
+      declarations: [ PoloItemComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SedeItemComponent);
+    fixture = TestBed.createComponent(PoloItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

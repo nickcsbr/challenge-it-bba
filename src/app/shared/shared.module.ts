@@ -6,11 +6,17 @@ import { RouterModule } from '@angular/router';
 import { AppMaterialModule } from './app-material/app-material.module';
 import { CepComponent } from './components/cep/cep.component';
 import { HeaderComponent } from './components/header/header.component';
+import { InputComponent } from './components/input/input.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { CnpjPipe } from './pipes/cnpj.pipe';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     CepComponent,
+    UserProfileComponent,
+    InputComponent,
+    CnpjPipe,
   ],
   imports: [
     CommonModule,
@@ -22,7 +28,12 @@ import { HeaderComponent } from './components/header/header.component';
   exports: [
     AppMaterialModule,
     HeaderComponent,
-    CepComponent
+    CepComponent,
+    InputComponent,
+    
+  ],
+  providers: [
+    CnpjPipe
   ]
 })
 export class SharedModule { }

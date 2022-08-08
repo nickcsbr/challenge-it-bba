@@ -6,15 +6,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SedeItemComponent } from './home/pages/sedes/sede-item/sede-item.component';
-import { SedesListComponent } from './home/pages/sedes/sedes-list/sedes-list.component';
+import { PoloItemComponent } from './home/pages/polos/polo-item/polo-item.component';
+import { PolosListComponent } from './home/pages/polos/polos-list/polos-list.component';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SedesListComponent,
-    SedeItemComponent,
+    PolosListComponent,
+    PoloItemComponent,
   ],
   imports: [
     HttpClientModule,

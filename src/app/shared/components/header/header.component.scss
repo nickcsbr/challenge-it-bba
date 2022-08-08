@@ -1,15 +1,28 @@
 .header {
-    background-color: #ffdbc5;
-    border-bottom: 3px solid #ff6f1f;
-    height: 107px;
-    width: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    
-    img {
-        padding-left: 75px;
-        vertical-align: middle;
-        max-height: 61px;
-    }
+  justify-content: center;
+  background-color: #ffdbc5;
+  border-bottom: 3px solid #ff6f1f;
+  padding: 0px 150px;
+  height: 107px;
+
+  img {
+    max-height: 61px;
+  }
 }
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+  padding: 0;
+}
+
+.flexExpand {
+  flex: 1 1 auto;
+}
+
+.language {
+  border-right: 1px solid black;
+  padding: 10px 25px;
+}
+
+
+
+

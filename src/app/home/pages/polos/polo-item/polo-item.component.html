@@ -1,0 +1,36 @@
+<div *ngIf="name" class="container">
+  <h1>Polo {{name}}</h1>
+  <span>exibindo detalhes do polo {{name}}#{{id}}</span>
+
+  <form [formGroup]="poloItemForm" (ngSubmit)="onSubmit()">
+  
+    <div class="row">
+      <p>Detalhes do Endereço</p>
+      <app-cep size="col-size-1" [control]="getFormControl('cep')" (cepData)="onCepDataReceived($event)"></app-cep>
+      <app-input size="col-size-2" label="Nome da Rua" placeholder="Nome da Rua" [control]="getFormControl('rua')"></app-input>
+      <app-input size="col-size-1" label="Bairro" placeholder="Bairro" [control]="getFormControl('bairro')"></app-input>
+      <app-input size="col-size-1" label="Estado" placeholder="Estado" [control]="getFormControl('estado')"></app-input>
+      <app-input size="col-size-1" label="Cidade" placeholder="Cidade"  [control]="getFormControl('cidade')"></app-input>
+    </div>
+    <div class="row">
+      <p>Detalhes da Empresa</p>
+      <app-input size="col-size-1" label="Nome" placeholder="Digite o Nome" [control]="getFormControl('name')"></app-input>
+      <app-input size="col-size-1" label="Business" placeholder="Digite o Business" [control]="getFormControl('business')"></app-input>
+      <app-input size="col-size-1" label="Valuation" placeholder="Digite o valor" type="currency"[control]="getFormControl('valuation')"></app-input>
+      <app-input size="col-size-1" label="CNPJ" placeholder="Digite o CNPJ" type="cnpj" [control]="getFormControl('cnpj')"></app-input>
+      
+      <mat-form-field [ngClass]="'col-size-1'" appearance="outline">
+        <mat-label>Ativo?</mat-label>
+        <select matNativeControl formControlName="active">
+          <option value="true" selected>Sim</option>
+          <option value="false">Não</option>
+        </select>
+        
+      </mat-form-field>
+    </div>
+
+    <button mat-flat-button [routerLink]="['/']" class="btn btn-secondary">Voltar</button>
+    <button mat-flat-button class="btn btn-primary" type="submit">Salvar</button>
+
+  </form>
+</div>

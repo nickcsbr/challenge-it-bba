@@ -1,3 +1,18 @@
-<div class="header">
-    <img src="../../../../assets/itau-bba-logo.png" alt="" [routerLink]="['/']" routerLinkActive="router-link-active" >
-</div>
+<mat-toolbar class="header">
+  <mat-toolbar-row>
+    <div>
+      <img src="../../../../assets/itau-bba-logo.png" alt="" [routerLink]="['/']" routerLinkActive="router-link-active">
+    </div>
+
+    <span class="flexExpand"></span>
+
+    <div>
+      <span class="language">PT</span>
+    </div>
+
+    <div>
+      <app-user-profile [name]="user.name" [title]="user.title" [avatar]="user.avatar"></app-user-profile>
+    </div>
+
+  </mat-toolbar-row>
+</mat-toolbar>
